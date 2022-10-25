@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: montsecret;
+
+}
+nav{
+    background: rgba(146, 190, 25, 0.89);
+    height: 80px;
+    width: 100%;
+
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font: 20px;
+    padding: 7 13px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+.active,a:hover{
+    background: rgb(233, 143, 143);
+    transition: .5s;
+}
+nav #icon{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin: 25 20px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:1048px){
+    label.logo{
+        font-size:32px;
+        padding-left:60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 12px;
+    }
+}
+@media (max-width:800px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: url(phone.png) ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        
+        margin: 50 0px;
+        line-height: 30px;
+        display: block;
+
+    }
+    nav a {
+        font-size: 12px;
+        line-height: 10px;
+    }
+    a.active,a:hover{
+        border: none;
+        background: none;
+        color: rgba(252, 255, 59, 0.89);
+        font-size: 18px;
+    }
+    nav ul.show{
+        left: 0;
+    }
+}
+
+section{
+    background: url(lko.jpg) ;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
